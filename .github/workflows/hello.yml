@@ -14,3 +14,9 @@ jobs:
 
       - name: Print hello world
         run: echo "Hello World!"
+        
+      - name: Print current date and time
+        run: echo "Current date and time: $(date)"
+        
+      - name: Print current working directory
+        run: echo "Current working directory: $(pwd)"
