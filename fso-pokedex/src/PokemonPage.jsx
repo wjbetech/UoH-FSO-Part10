@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import LoadingSpinner from './LoadingSpinner'
-import { useApi } from './useApi'
+import { useApi } from './useApi.mjs'
 import PokemonAbility from './PokemonAbility'
 import ErrorMessage from './ErrorMessage'
 
