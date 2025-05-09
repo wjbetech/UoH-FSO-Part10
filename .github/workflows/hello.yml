@@ -16,7 +16,7 @@ jobs:
         run: echo "Hello World!"
 
       - name: Print current date and time
-        run: echo date
+        run: date
 
       - name: Print current working directory
-        run: echo ls
+        run: ls
