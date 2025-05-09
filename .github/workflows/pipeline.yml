@@ -23,3 +23,11 @@ jobs:
       - name: Lint Project
         run: npm run eslint
         working-directory: ./fso-pokedex
+
+      - name: Build Project
+        run: npm run build
+        working-directory: ./fso-pokedex
+
+      - name: Run Tests
+        run: npm test
+        working-directory: ./fso-pokedex
