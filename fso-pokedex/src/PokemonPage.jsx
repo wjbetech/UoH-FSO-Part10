@@ -18,7 +18,7 @@ const PokemonPage = ({ previous, next }) => {
     return <ErrorMessage error={error} />;
   }
 
-  const { type } = pokemon.types.find((type) => type.slot === 1);
+  const type = pokemon.types?.find((type) => type.slot === 1)?.type || { name: "unknown" };
   const stats = pokemon.stats
     .map((stat) => ({
       name: formatName(stat.stat.name),
@@ -28,7 +28,6 @@ const PokemonPage = ({ previous, next }) => {
   const normalAbility = pokemon.abilities.find((ability) => !ability.is_hidden);
   const hiddenAbility = pokemon.abilities.find((ability) => ability.is_hidden === true);
 
-  // eslint-disable-next-line no-console
   console.log("hiddenAbility=", hiddenAbility);
   return (
     <>

@@ -9,6 +9,8 @@ test.describe("Pokedex", () => {
 
   test("can navigate to a pokemon", async ({ page }) => {
     await page.goto("/pokemon/ivysaur");
-    await expect(page.getByText("chlorophyll")).toBeVisible();
+    const abilityText = await page.getByText("chlorophyll");
+    if (!abilityText) console.error("Ability 'chlorophyll' not found on page.");
+    await expect(abilityText).toBeVisible();
   });
 });
