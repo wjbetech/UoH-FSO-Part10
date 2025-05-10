@@ -27,25 +27,25 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     baseURL: "http://localhost:8080", // match your dev server
-    trace: "on-first-retry",
+    trace: "on-first-retry"
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      use: { ...devices["Desktop Chrome"] }
     },
 
     {
       name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      use: { ...devices["Desktop Firefox"] }
     },
 
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"] },
-    },
+      use: { ...devices["Desktop Safari"] }
+    }
 
     /* Test against mobile viewports. */
     // {
@@ -72,6 +72,6 @@ export default defineConfig({
   webServer: {
     command: "npm run start", // or "npm run start-prod" if you prefer
     url: "http://localhost:8080", // adjust to match your dev server's actual port
-    reuseExistingServer: !process.env.CI,
-  },
+    reuseExistingServer: !process.env.CI
+  }
 });
