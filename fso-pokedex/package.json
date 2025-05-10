@@ -9,8 +9,7 @@
     "test": "jest",
     "eslint": "eslint './**/*.{js,jsx}' --ignore-pattern .eslintrc.js",
     "build": "webpack --mode production",
-    "test:e2e": "playwright test",
-    "test:e2e:ci": "playwright install --with-deps && playwright test"
+    "test-e2e": "playwright install --with-deps && playwright test"
   },
   "repository": {
     "type": "git",
