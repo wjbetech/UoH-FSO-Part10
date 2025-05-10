@@ -1,5 +1,4 @@
 import { test, expect } from "@playwright/test";
-import describe from "@playwright/test";
 
 describe("Pokedex", () => {
   test("front page can be opened", async ({ page }) => {
